@@ -2,13 +2,12 @@ require 'sinatra' #for actual serving and other
 
 #This is a test application for proof of concept on a group project
 
-
 #this is the default index/home page
 #if sinatra receives a route(address) matching
 # it returns the result. Careful of first close matching
-get '/' do
- content_type :txt
- "Hello, world!"
+
+get '/index' do
+  erb :index
 end
 
 #Organizer poll creation page
@@ -37,6 +36,11 @@ end
 get '/results' do
  content_type :txt
  "Survey says winner is 'top' based on 'voting method' with 'x' votes successfully counted'"
+end
+
+get '/' do
+  content_type :txt
+  "hello world!"
 end
 
 #Needs a 404 route
