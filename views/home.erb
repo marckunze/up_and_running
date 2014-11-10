@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Using instance variables</title>
+</head>
+<body>
+  <h1>Hello <%= @username %>!</h1>
+  <p>You currently have the following polls open</p>
+  <ol>
+  <% @polls.each do |poll| %>
+  <li><%= poll %></li>
+<% end %>
+</ol>
+</body>
+</html>
+

@@ -10,6 +10,12 @@ get '/index' do
   erb :index
 end
 
+get '/home' do
+  @username = 'Some Random User'
+  @polls = ['lunch', 'dinner', 'bar']
+  erb :home
+end
+
 #Organizer poll creation page
 get '/poll' do
   content_type :txt
